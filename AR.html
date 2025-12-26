@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ferdi - Anaknya Arvian</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.umd.js"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-600 to-pink-500 min-h-screen flex items-center justify-center">
+  <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-md w-full text-center">
+    <h1 class="text-3xl font-bold mb-2">👶 Ferdi</h1>
+    <p class="text-gray-500 mb-4">Anaknya Arvian (versi web paling absurd)</p><div class="bg-yellow-100 rounded-xl p-4 mb-4">
+  <p id="quote" class="text-lg font-semibold">Ferdi baru bangun tidur tapi udah ngaceng</p>
+</div>
+
+<div class="grid grid-cols-2 gap-3 mb-4">
+  <button onclick="gantiQuote()" class="bg-purple-500 text-white rounded-xl py-2 hover:bg-purple-600 transition">Ganti Cerita</button>
+  <button onclick="tambahSkor()" class="bg-pink-500 text-white rounded-xl py-2 hover:bg-pink-600 transition">Ferdi Ngambek</button>
+</div>
+
+<div class="bg-gray-100 rounded-xl p-3 mb-4">
+  <p class="text-sm">Jumlah Ngambek Hari Ini:</p>
+  <p id="skor" class="text-2xl font-bold text-red-500">0x</p>
+</div>
+
+<p class="text-xs text-gray-400">Website ini dibuat hanya untuk lucu-lucuan 🤣</p>
+
+  </div>  <script>
+    const quotes = [
+      "Ferdi baru selesai coli",
+      "Ferdi nangis karena manuke 6cm",
+      "Ferdi ngamuk gara-gara di ks",
+      "Ferdi ngambek karena gak dibolehin ngkcok",
+      "Ferdi bilang: Ayah Arvian mana rokokya"
+    ];
+
+    let skor = 0;
+
+    function gantiQuote() {
+      const q = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById('quote').innerText = q;
+    }
+
+    function tambahSkor() {
+      skor++;
+      document.getElementById('skor').innerText = skor + "x";
+    }
+  </script></body>
+</html>
